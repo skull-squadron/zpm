@@ -25,8 +25,8 @@ _ZPM_PLUGIN_DIR="${ZPM_DATA_HOME}/plugins/zpm"
 export ZPM_CACHE_HOME="${ZPM_CACHE_HOME:-${XDG_CACHE_HOME:-$HOME/.cache}/zpm}"
 _ZPM_COMPDUMP="${ZPM_CACHE_HOME}/zcompdump-${ZSH_VERSION}"
 
-fpath=("${_ZPM_DIR}/functions" "${ZSH_TMP_DIR}/functions" $fpath)
-export PATH="${ZSH_TMP_DIR}/bin:$PATH"
+fpath=("${_ZPM_DIR}/functions" "${ZPM_TMP_DIR}/functions" $fpath)
+export PATH="${ZPM_TMP_DIR}/bin:$PATH"
 typeset -gaU path fpath
 
 autoload -Uz compinit
