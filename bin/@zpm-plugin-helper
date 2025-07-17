@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-fpath+=("${_ZPM_DIR}/functions" "${ZSH_TMP_DIR}/functions")
+fpath+=("${_ZPM_DIR}/functions" "${ZPM_TMP_DIR}/functions")
 
 function _msg() {
   local msg
