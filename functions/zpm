@@ -8,7 +8,7 @@ fi
 
 if [[ "$1" == 'if' ]]; then
   if [[ "${is[$2]}" == '1' ]] ; then
-	  shift 2
+    shift 2
     zpm "$@"
   fi
   return 0
