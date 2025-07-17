@@ -14,16 +14,16 @@ export PMSPEC="0fbs"
 0="${${(M)0:#/*}:-$PWD/$0}"
 export _ZPM_DIR="${0:h}"
 
-export ZSH_TMP_DIR="${ZSH_TMP_DIR:-${XDG_STATE_HOME:-$HOME/.local/state}/zpm}"
-_ZPM_CACHE="${ZSH_TMP_DIR}/zpm-cache.zsh"
-_ZPM_CACHE_ASYNC="${ZSH_TMP_DIR}/zpm-cache-async.zsh"
+export ZPM_TMP_DIR="${ZPM_TMP_DIR:-${XDG_STATE_HOME:-$HOME/.local/state}/zpm}"
+_ZPM_CACHE="${ZPM_TMP_DIR}/cache.zsh"
+_ZPM_CACHE_ASYNC="${ZPM_TMP_DIR}/cache-async.zsh"
 
-export ZSH_DATA_HOME="${ZSH_DATA_HOME:-${XDG_DATA_HOME:-$HOME/.local/share}/zsh}"
-_ZPM_PLUGINS_DIR="${ZSH_DATA_HOME}/plugins"
-_ZPM_PLUGIN_DIR="${ZSH_DATA_HOME}/plugins/zpm"
+export ZPM_DATA_HOME="${ZPM_DATA_HOME:-${XDG_DATA_HOME:-$HOME/.local/share}/zpm}"
+_ZPM_PLUGINS_DIR="${ZPM_DATA_HOME}/plugins"
+_ZPM_PLUGIN_DIR="${ZPM_DATA_HOME}/plugins/zpm"
 
-export ZSH_CACHE_HOME="${ZSH_CACHE_HOME:-${XDG_CACHE_HOME:-$HOME/.cache}/zsh}"
-_ZPM_COMPDUMP="${ZSH_CACHE_HOME}/zcompdump-${ZSH_VERSION}"
+export ZPM_CACHE_HOME="${ZPM_CACHE_HOME:-${XDG_CACHE_HOME:-$HOME/.cache}/zpm}"
+_ZPM_COMPDUMP="${ZPM_CACHE_HOME}/zcompdump-${ZSH_VERSION}"
 
 fpath=("${_ZPM_DIR}/functions" "${ZSH_TMP_DIR}/functions" $fpath)
 export PATH="${ZSH_TMP_DIR}/bin:$PATH"
